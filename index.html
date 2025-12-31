@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alekhya Vilasagarapu | Portfolio</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 10%; background: white; position: sticky; top: 0;
+            z-index: 1000; border-bottom: 1px solid #e2e8f0;
+        }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; }
+
+        /* Hero */
+        header {
+            padding: 80px 10%; display: flex; align-items: center;
+            justify-content: space-between; flex-wrap: wrap; gap: 40px;
+            background: white;
+        }
+        .hero-text { flex: 1; min-width: 300px; }
+        .hero-text h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; }
+        .hero-text span { color: var(--primary); }
+        
+        .profile-img-container {
+            width: 280px; height: 280px; border-radius: 50%;
+            overflow: hidden; border: 8px solid #f1f5f9;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* General Section Styling */
+        section { padding: 80px 10%; }
+        .section-title { font-size: 2rem; margin-bottom: 3rem; border-left: 5px solid var(--primary); padding-left: 15px; }
+
+        /* NEW SKILLS SECTION STYLING */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .skill-category:hover { 
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.1);
+        }
+        .skill-category h4 { color: var(--primary); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .skill-list { list-style: none; color: var(--gray); font-weight: 500; }
+        .skill-list li { margin-bottom: 8px; }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+        .status-badge { background: #ecfdf5; color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+
+        footer { background: var(--dark); color: white; padding: 60px 10%; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+        .contact-info a { color: #94a3b8; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: 800; font-size: 1.2rem;">AV</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-text">
+            <p style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">Hello, I'm</p>
+            <h1><span>Alekhya Vilasagarapu</span></h1>
+            <p style="color: var(--gray); font-size: 1.1rem; margin-bottom: 20px;">
+                2nd Year Computer Science Student | Fast Learner | Deep Learner
+            </p>
+        </div>
+        <div class="profile-img-container">
+            <img src="Alekhya profile.jpg" alt="Alekhya Vilasagarapu">
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>I am currently a <strong>2nd-year engineering student</strong>. My approach to technology is defined by my nature as a <strong>deep learner</strong>—I focus on understanding core concepts thoroughly before moving to applications. As a <strong>fast learner</strong>, I am always eager to pick up new tools and frameworks to solve complex problems.</p>
+    </section>
+
+    <section id="skills" style="background-color: #f1f5f9;">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>C Language</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Core CS</h4>
+                <ul class="skill-list">
+                    <li>Operating Systems (OS)</li>
+                    <li>DBMS</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Data & AI</h4>
+                <ul class="skill-list">
+                    <li>Data Analytics</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Tools</h4>
+                <ul class="skill-list">
+                    <li>GitHub</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Latest Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <span class="status-badge">AI / ML</span>
+                <h3 style="margin-top:10px;">Tree Species Detector</h3>
+                <p style="color: var(--gray); margin-top: 10px;">An AI-driven project to identify different tree types using computer vision.</p>
+                
+                <a href="https://alekhya-1236.github.io/tree-species/" style="color:var(--primary); text-decoration:none; display:block; margin-top:10px;">GitHub Link → https://alekhya-1236.github.io/tree-species/</a>
+            </div>
+
+            <div class="project-card">
+                <span class="status-badge">Data Analytics</span>
+                <h3 style="margin-top:10px;">Mental Health Analysis</h3>
+                <p style="color: var(--gray); margin-top: 10px;">Analyzing datasets to understand mental health trends in student communities.</p>
+                
+                <a href="#" style="color:var(--primary); text-decoration:none; display:block; margin-top:10px;">Project Link → https://alekhya-1236.github.io/dav-mentalhealth1/</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Connect With Me</h2>
+        <div class="contact-info">
+            <a href="mailto:alekhyavilasagarapu12@email.com">📧 Email</a>
+            <a href="tel:+916304457652">📞 Phone 6304457652 </a>
+            <a href="https://linkedin.com/in/alekhyavilasagarapu">🔗 LinkedIn</a>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.8rem; color: #64748b;">© 2025 Alekhya Vilasagarapu</p>
+    </footer>
+
+</body>
+</html>
